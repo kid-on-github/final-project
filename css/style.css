@@ -1,5 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
 body{
-    background-color: #333;
+    margin: 0;
+    background-color: #fafafa;
 }
 
 
+header{
+    width: 100%;
+    padding: 20px 100px;
+    background-color: #fff;
+    border-bottom: 1px solid #dbdbdb;
+    text-align: right;
+    min-height: 70px;
+}
+
+.ddWrapper,
+.dropdownWrapper{
+    padding: 10px;
+    display: inline-block;
+    position: fixed;
+    top:15px;
+    right: 20px;
+    background-color: #4f4f4f;
+    color:white;
+}
+
+.dropdownWrapper > label{
+    width: 100%;
+    display: block;
+    cursor: pointer;
+}
+
+
+.ddWrapper > a,
+.dropdownWrapper > a{
+    display: block;
+    height:0px;
+    overflow: hidden;
+    margin:0;
+    transition: height .10s, margin .10s;
+}
+
+
+/* Don't show highlighted section */
+.ddWrapper > p,
+.dropdownWrapper > label::selection {
+    background: transparent;
+}
+
+.ddWrapper:hover > a,
+#dropdown:checked + .dropdownWrapper > a{
+    height:1em;
+    margin: 8px 0;
+}
+
+#dropdown{
+    display: none;
+}
+
+
+.ddWrapper{
+    left: 20px;
+    right: unset;
+}
+
+.ddWrapper > p{
+    margin:0;
+    cursor: pointer;
+}
+
+
+.ddWrapper::after{
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: -20px;
+    display: block;
+    background-color: #4f4f4f;
+    padding: 10px;
+    background-image: url("/img/arrow.svg");
+    background-position: center;
+    transition: transform .1s;
+    border-radius: 50%;
+}
+
+
+.ddWrapper:hover::after{
+    transform: rotate(180deg);
+}
