@@ -94,3 +94,52 @@ header{
 .ddWrapper:hover::after{
     transform: rotate(180deg);
 }
+
+video{
+    margin:100px auto;
+    display: block;
+    width: 800px;
+}
+
+form{
+    margin: 100px auto;
+    display: block;
+    width: 600px;
+    background-color: #fff;
+    border: 1px solid #333;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+input{
+    display: block;
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+label{
+    margin-bottom: 10px;
+    display: block;
+}
+
+input:focus{
+    outline: 1px solid red;
+    outline-offset: 5px;
+}
+
+input[type="submit"]{
+    background-color: #333;
+    color:white;
+    padding: 10px;
+    border: none;
+}
+
+
+footer{
+    background-color: #333;
+    color:white;
+    width: 100%;
+    padding: 100px;
+    position: absolute;
+    bottom:0px;
+}
