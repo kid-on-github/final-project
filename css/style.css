@@ -127,9 +127,21 @@ input:focus{
     outline-offset: 5px;
 }
 
+
+
+input[type="submit"],
+footer{
+    color:white;
+}
+
+
+
+
+
+
+
 input[type="submit"]{
     background-color: #333;
-    color:white;
     padding: 10px;
     border: none;
 }
@@ -137,9 +149,19 @@ input[type="submit"]{
 
 footer{
     background-color: #333;
-    color:white;
     width: 100%;
     padding: 100px;
     position: absolute;
     bottom:0px;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+
+
+.color-white{
+    color:white;
 }
